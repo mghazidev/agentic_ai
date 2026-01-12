@@ -1,0 +1,21 @@
+Name, Rating, Reviews, Feedback
+Spice Hub, 4.5, 320, Amazing taste and fast service
+Urban Bites, 4.2, 210, Good food with cozy ambiance
+Desi Delight, 4.7, 540, Authentic desi flavors loved it
+Burger Corner, 4.0, 180, Juicy burgers and good value
+Pizza Palace, 4.3, 260, Cheesy pizzas with fresh toppings
+BBQ Nation Grill, 4.6, 410, Excellent BBQ and great portions
+Cafe Aroma, 4.1, 150, Calm environment and fresh coffee
+Food Street Express, 3.9, 95, Decent food but slow service
+Royal Tandoor, 4.4, 370, Best naan and handi in town
+Green Bowl, 4.2, 200, Healthy options and fresh salads
+Hot Wok, 4.0, 165, Tasty Chinese food and quick delivery
+Sweet Tooth Bakery, 4.8, 620, Delicious desserts and cakes
+Lahori Karahi, 4.6, 480, Authentic Lahori taste
+Sea Breeze, 4.3, 230, Fresh seafood and great flavors
+Daily Dine, 3.8, 110, Affordable meals for everyday dining
+Street Cravings, 4.1, 190, Perfect spot for quick snacks
+Grill House, 4.5, 350, Premium grilled food experience
+Veggie World, 4.0, 140, Good vegetarian options
+Midnight Munch, 3.7, 85, Late night food with average taste
+Chef’s Table, 4.9, 710, Exceptional quality and presentation

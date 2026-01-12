@@ -1,19 +1,17 @@
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 from langchain_community.document_loaders import TextLoader
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.prompts import PromptTemplate
 
 # =========================
 # 1️⃣ LOAD LLM (Brain)
 # =========================
-llm = Ollama(model="llama3")
+llm = OllamaLLM(model="llama3")
 
 # =========================
 # 2️⃣ LOAD FILE
 # =========================
 loader = TextLoader("restaurants.txt")
 documents = loader.load()
-
 restaurant_data = documents[0].page_content
 
 # =========================
@@ -23,7 +21,6 @@ prompt = PromptTemplate(
     input_variables=["data", "question"],
     template="""
 You are a food data analyst.
-
 Here is restaurant data:
 {data}
 
@@ -33,9 +30,9 @@ Answer the following question clearly and accurately:
 )
 
 # =========================
-# 4️⃣ CHAIN (Glue)
+# 4️⃣ CHAIN (Modern LCEL Style)
 # =========================
-chain = LLMChain(llm=llm, prompt=prompt)
+chain = prompt | llm
 
 # =========================
 # 5️⃣ ASK QUESTIONS
@@ -44,10 +41,9 @@ while True:
     question = input("\nAsk a question (or type 'exit'): ")
     if question.lower() == "exit":
         break
-
-    response = chain.run(
-        data=restaurant_data,
-        question=question
-    )
-
+    
+    response = chain.invoke({
+        "data": restaurant_data,
+        "question": question
+    })
     print("\n🍽️ Answer:\n", response)
